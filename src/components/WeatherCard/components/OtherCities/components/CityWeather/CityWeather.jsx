@@ -16,8 +16,8 @@ const CityWeather = ({
         className={
           "bg-gradient-to-r from-newBlue-Cornflower to-newBlue-Dodger w-[200px] opacity-75 text-center text-white"
         }>
-        <WeatherIcon weatherName={weatherIcon} size={14} />
-        <div className="text-3xl font-semibold mt-4">{city}</div>
+        <WeatherIcon weatherName={weatherIcon} className={'w-14'} />
+        <div className="text-3xl font-semibold mt-8">{city}</div>
         <TemperatureRange min={minTemperature} max={maxTemperature} />
       </Container>
     </BackgroundImage>
