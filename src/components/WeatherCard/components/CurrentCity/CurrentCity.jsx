@@ -17,7 +17,7 @@ const CurrentCity = () => {
   useEffect(() => {
     axios
       .get(
-        "https://api.weatherapi.com/v1/forecast.json?key=88d6da17c65944d4bc640552232910&q=London&aqi=yes"
+        "https://api.weatherapi.com/v1/forecast.json?key=88d6da17c65944d4bc640552232910&q=London&aqi=yes&days=4"
       )
       .then((res) => {
         setDate(res.data.current.last_updated);
