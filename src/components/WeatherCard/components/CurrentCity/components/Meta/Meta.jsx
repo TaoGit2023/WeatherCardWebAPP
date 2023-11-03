@@ -4,7 +4,7 @@ import Somatosensory from "../../../../../../assets/meta_icon/Somatosensory_temp
 import Wind from "../../../../../../assets/meta_icon/wind_speed.svg";
 import Item from "./components/Item/Item";
 import Container from "../../../../../Container/Container";
-const Meta = ({meta}) => {
+const Meta = ({meta} ) => {
   const {humidity, windSpeed, pm, somatosensory} = meta;
   return (
     <Container className="bg-Solitude flex p-6 justify-around text-black text-center mt-12">
