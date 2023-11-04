@@ -7,9 +7,42 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const OtherCities = () => {
-  const [citiesWeather, setCitiesWeather] = useState([]);
+  const [citiesWeather, setCitiesWeather] = useState({});
   const cities = ["Sydney", "Shanghai", "Newyork", "London"];
-  const cityInfo = [];
+  const allCitiesWeather = [
+    {
+      name: "Shanghai",
+      temperatureRange: {
+        min: 20,
+        max: 23,
+      },
+      bg: Shanghai,
+    },
+    {
+      name: "Sydney",
+      temperatureRange: {
+        min: 20,
+        max: 23,
+      },
+      bg: Sydney,
+    },
+    {
+      name: "New York",
+      temperatureRange: {
+        min: 20,
+        max: 23,
+      },
+      bg: Newyork,
+    },
+    {
+      name: "London",
+      temperatureRange: {
+        min: 20,
+        max: 23,
+      },
+      bg: London,
+    },
+  ];
   useEffect(() => {
     // const fetchCity = async () => {
     //   for (let i = 0; i < cities.length; i++) {
@@ -36,15 +69,15 @@ const OtherCities = () => {
   }, []);
   return (
     <div className="flex justify-around mt-8">
-      {cities.map((cityWeatherInfo) => {
+      {allCitiesWeather.map((cityWeather) => {
         return (
           <CityWeather
-            key={cityWeatherInfo}
-            city={cityWeatherInfo}
+            key={cityWeather.name}
+            city={cityWeather.name}
             weatherIcon={"Sunny"}
-            minTemperature={11}
-            maxTemperature={20}
-            bg={cityWeatherInfo}
+            minTemperature={cityWeather.temperatureRange.min}
+            maxTemperature={cityWeather.temperatureRange.min}
+            bg={cityWeather.bg}
           />
         );
       })}
